@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Web Page with Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header, section, footer {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+        form {
+            background-color: #f5f5f5;
+            padding: 25px;
+            border-radius: 5px;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .radio-group, .checkbox-group {
+            margin-bottom: 15px;
+        }
+        .radio-option, .checkbox-option {
+            margin-bottom: 5px;
+        }
+        .required:after {
+            content: " *";
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Enhanced Web Page</h1>
+        <p>This page demonstrates the use of semantic HTML5 elements, lists, tables, media, and a complete form with validation.</p>
+    </header>
+
+    <section id="lists">
+        <h2>Types of Lists</h2>
+        
+        <article>
+            <h3>Unordered List (Features)</h3>
+            <ul>
+                <li>Responsive Design</li>
+                <li>HTML5 Validation</li>
+                <li>Accessible Forms</li>
+                <li>Semantic Markup</li>
+            </ul>
+        </article>
+        
+        <article>
+            <h3>Ordered List (Steps to Success)</h3>
+            <ol>
+                <li>Plan your content</li>
+                <li>Structure your HTML</li>
+                <li>Style with CSS</li>
+                <li>Test for accessibility</li>
+                <li>Deploy your site</li>
+            </ol>
+        </article>
+        
+        <article>
+            <h3>Description List (Terminology)</h3>
+            <dl>
+                <dt>HTML5</dt>
+                <dd>The latest version of HyperText Markup Language</dd>
+                
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets for presentation</dd>
+                
+                <dt>ARIA</dt>
+                <dd>Accessible Rich Internet Applications for improved accessibility</dd>
+            </dl>
+        </article>
+    </section>
+
+    <section id="tables">
+        <h2>Sample Data Table</h2>
+        <table>
+            <caption>Monthly Sales Report</caption>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Product A</th>
+                    <th>Product B</th>
+                    <th>Product C</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>January</td>
+                    <td>$1,200</td>
+                    <td>$800</td>
+                    <td>$1,500</td>
+                    <td>$3,500</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$1,000</td>
+                    <td>$950</td>
+                    <td>$1,200</td>
+                    <td>$3,150</td>
+                </tr>
+                <tr>
+                    <td>March</td>
+                    <td>$1,500</td>
+                    <td>$1,200</td>
+                    <td>$1,800</td>
+                    <td>$4,500</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Quarter Total</td>
+                    <td>$3,700</td>
+                    <td>$2,950</td>
+                    <td>$4,500</td>
+                    <td>$11,150</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section id="media">
+        <h2>Media Examples</h2>
+        
+        <article>
+            <h3>Image</h3>
+            <figure>
+                <img src="https://via.placeholder.com/800x400" alt="Sample placeholder image">
+                <figcaption>Sample image with placeholder service</figcaption>
+            </figure>
+        </article>
+        
+        <article>
+            <h3>Video</h3>
+            <video controls width="800" poster="https://via.placeholder.com/800x450">
+                <source src="sample-video.mp4" type="video/mp4">
+                <track kind="captions" src="sample-captions.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <p>Sample video with placeholder poster (actual video file not included)</p>
+        </article>
+        
+        <article>
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="sample-audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p>Sample audio player (actual audio file not included)</p>
+        </article>
+    </section>
+
+    <section id="form">
+        <h2>Registration Form</h2>
+        <form id="registration" action="/submit" method="post" novalidate>
+            <fieldset>
+                <legend><span class="required">Personal Information</span></legend>
+                
+                <div>
+                    <label for="fullname" class="required">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required minlength="3" placeholder="Enter your full name" autocomplete="name">
+                </div>
+                
+                <div>
+                    <label for="email" class="required">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="user@example.com" autocomplete="email">
+                </div>
+                
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="tel">
+                    <small>Format: 123-456-7890</small>
+                </div>
+                
+                <div>
+                    <label for="dob" class="required">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required max="2005-12-31">
+                </div>
+                
+                <div>
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="18" max="120" readonly>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Account Details</legend>
+                
+                <div>
+                    <label for="username" class="required">Username</label>
+                    <input type="text" id="username" name="username" required minlength="4" maxlength="20" placeholder="Choose a username" autocomplete="username">
+                </div>
+                
+                <div>
+                    <label for="password" class="required">Password</label>
+                    <input type="password" id="password" name="password" required minlength="8" placeholder="Create a password" autocomplete="new-password">
+                    <small>Minimum 8 characters</small>
+                </div>
+                
+                <div>
+                    <label for="confirm-password" class="required">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Re-enter your password" autocomplete="new-password">
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Preferences</legend>
+                
+                <div class="radio-group">
+                    <label>Subscription Type</label>
+                    <div class="radio-option">
+                        <input type="radio" id="free" name="subscription" value="free" checked>
+                        <label for="free">Free</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="premium" name="subscription" value="premium">
+                        <label for="premium">Premium ($9.99/month)</label>
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="interests">Interests</label>
+                    <select id="interests" name="interests" multiple size="4">
+                        <option value="technology">Technology</option>
+                        <option value="sports">Sports</option>
+                        <option value="music">Music</option>
+                        <option value="travel">Travel</option>
+                        <option value="cooking">Cooking</option>
+                    </select>
+                </div>
+                
+                <div class="checkbox-group">
+                    <label>Communication Preferences</label>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter">Email Newsletter</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="promotions" name="promotions">
+                        <label for="promotions">Special Promotions</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="notifications" name="notifications">
+                        <label for="notifications">Push Notifications</label>
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="website">Personal Website</label>
+                    <input type="url" id="website" name="website" placeholder="https://example.com">
+                </div>
+                
+                <div>
+                    <label for="favorite-color">Favorite Color</label>
+                    <input type="color" id="favorite-color" name="favorite-color" value="#3498db">
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <div>
+                    <label for="bio">Biography</label>
+                    <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+                </div>
+                
+                <div>
+                    <label for="file-upload">Upload Profile Picture</label>
+                    <input type="file" id="file-upload" name="file-upload" accept="image/png, image/jpeg">
+                </div>
+                
+                <div>
+                    <label for="experience">Years of Experience</label>
+                    <input type="range" id="experience" name="experience" min="0" max="20" value="5" step="1">
+                    <output for="experience" id="experience-output">5</output>
+                </div>
+            </fieldset>
+            
+            <div>
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Enhanced Web Page. All rights reserved.</p>
+        <address>
+            Contact us at <a href="mailto:info@example.com">info@example.com</a>
+        </address>
+    </footer>
+</body>
+</html>
